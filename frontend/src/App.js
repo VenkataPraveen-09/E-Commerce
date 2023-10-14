@@ -1,11 +1,12 @@
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import { BrowserRouter,Routes,Route} from 'react-router-dom';
-import LoginSignup from './pages/LoginSignup';
+import Signup from './pages/Signup';
 import Shop from './pages/Shop';
 import ShopCategory from './pages/ShopCategory';
 import Product from './pages/Product';
 import Cart from './pages/Cart';
+import Login from './pages/Login';
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
             <Route path=':productId' element={<Product/>}/>
           </Route>      
             <Route path='/cart' element={<Cart/>}/>
-            <Route path='/login' element={<LoginSignup/>}/>
+            <Route path='/login' element={<Login/>}/>
+            <Route path='/signup' element={<Signup/>}/>
           
       </Routes>
       </BrowserRouter>
