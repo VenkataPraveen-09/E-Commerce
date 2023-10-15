@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
   // import './Signup.css';
-  // import '../css/Signup.css'
+   import './css/Signup.css'
 const Signup = (props) => {
   const[credentials,setCredentials]= useState({name:"",email:"",password:"",cpassword:""})
   let navig=useNavigate();
@@ -30,18 +30,11 @@ const Signup = (props) => {
 const onChange=(e)=>{
     setCredentials({...credentials,[e.target.name]:e.target.value})
 }
-useEffect(() => {
-  // Add the pleasant-background class to the body element when the component mounts
-  document.body.classList.add('pleasant-background');
 
-  // Remove the pleasant-background class when the component unmounts
-  return () => {
-      document.body.classList.remove('pleasant-background');
-  };
-}, []);
 return (
+  <div className="signup">
   <div className="signup-container">
-    <h3>Create an account to use Inotebook</h3>
+    <h3>Create an account to use </h3>
     <form onSubmit={handleSubmit}>
       <div className="mb-3">
         <label htmlFor="name" className="form-label">
@@ -107,7 +100,16 @@ return (
       <button type="submit" className="btn btn-primary">
         Submit
       </button>
+      
     </form>
+    Already a User{' '}
+            <a
+                // onClick={() => navig('/signup')} // Navigate to the '/signup' route
+                href=' /login'
+            >
+                Login
+            </a>
+  </div>
   </div>
 );
 };

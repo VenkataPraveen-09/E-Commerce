@@ -1,7 +1,7 @@
 import React, { useEffect , useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 // import './Login.css'; // Import the local CSS file
-
+import './css/Login.css'
 
 const Login = (props) => {
     const [credentials, setCredentials] = useState({ email: "", password: "" })
@@ -39,10 +39,11 @@ const Login = (props) => {
     }, []);
 
     return (
+        <div className="login">
         <div className='login-container mt-2'>
-            <h3>Login to use Inotebook</h3>
+            <h3>Login</h3>
             <form onSubmit={handleSubmit}>
-                <div className="mb-3">
+                <div className="feilds mb-3">
                     <label htmlFor="email" className="form-label">Email address</label>
                     <input type="email" className="form-control" value={credentials.email} onChange={onChange} id="email" name="email" aria-describedby="emailHelp" />
                     <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
@@ -55,13 +56,16 @@ const Login = (props) => {
                 <button type="submit" className="btn btn-primary">Submit</button>
                 
             </form>
-            <button
-                onClick={() => navig('/signup')} // Navigate to the '/signup' route
-                className="btn btn-secondary"
+            New to the site signup here{' '}
+            <a
+                // onClick={() => navig('/signup')} // Navigate to the '/signup' route
+                href=' /signup'
             >
                 Sign Up
-            </button>
+            </a>
         </div>
+        
+</div>
     )
 }
 

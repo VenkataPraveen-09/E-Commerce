@@ -1,0 +1,72 @@
+
+
+  /* Login Container styling (if needed) */
+.login{
+  background-color: #fce3fe;
+  width: 100%;
+  height: 100vh;
+  padding-top: 100px;
+}
+  .login-container {
+    max-width: 580px; /* Adjust container width as needed */
+    height: auto;
+    margin: 0 auto;
+    padding: 40px 60px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: linear-gradient(180deg, #fde1ff 0%,white 60%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+  }
+  .login-container h1{
+    margin: 20px 0px;
+  }
+  .login-feilds{
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+    margin-top: 30px; 
+  }
+  
+  /* Login Form styling */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Login Input field styling */
+  .login-feilds input {
+    margin-bottom: 20px; /* Increase the margin to create more space */
+    padding-left: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    height: 72px;
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+  }
+  
+  .login-input:focus {
+    border-color: #007bff;
+  }
+  
+  /* Login Error message styling */
+  .login-error {
+    color: #dc3545;
+    font-size: 14px;
+  }
+
+  .login-container button{
+
+    color: white;
+    background: #ff4141;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+.login-container a{
+  color: #ff4141;
+}
