@@ -1,6 +1,6 @@
 /* Signup Container styling */
 .signup{
-  background-color: #fce3fe;
+  background: linear-gradient(180deg, #fde1ff 10%,white 60%);
   width: 100%;
   height: 100vh;
   padding-top: 100px;
