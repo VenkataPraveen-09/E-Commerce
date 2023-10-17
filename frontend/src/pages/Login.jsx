@@ -8,6 +8,12 @@ const Login = (props) => {
     let navig = useNavigate();
     const handleSubmit = async (e) => {
         e.preventDefault();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(credentials.email)) {
+        console.log("Invalid Email Format"); // Add a console log for debugging
+        alert("Invalid Email Format");
+        return;
+    }
         const response = await fetch("http://localhost:3001/api/auth/login", {
             method: 'POST',
             headers: {
@@ -21,6 +27,7 @@ const Login = (props) => {
             localStorage.setItem('token', json.authtoken);
             navig("/")
         } else {
+            alert("Invalid Credentials")
         }
     }
 
